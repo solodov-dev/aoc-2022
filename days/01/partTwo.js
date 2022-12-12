@@ -15,7 +15,6 @@ export default function partTwo(input) {
       cur = 0;
     }
   }
-  console.log(max1, max2, max3);
   return max1 + max2 + max3;
 }
 
