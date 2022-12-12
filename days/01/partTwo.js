@@ -1,6 +1,23 @@
 export default function partTwo(input) {
-  return 'Not implemented';
+  let [max1, max2, max3] = [0, 0, 0];
+  let cur = 0;
+  for (const line of input) {
+    if (line) {
+      cur += Number(line);
+    } else {
+      if (cur > max1) {
+        [max1, max2, max3] = [cur, max1, max2];
+      } else if (cur > max2) {
+        [max2, max3] = [cur, max2];
+      } else if (cur > max3) {
+        max3 = cur;
+      }
+      cur = 0;
+    }
+  }
+  console.log(max1, max2, max3);
+  return max1 + max2 + max3;
 }
 
-partTwo.description = 'Part two';
-partTwo.expected = 'Not implemented';
+partTwo.description = 'Three hungriest elves sum';
+partTwo.expected = 45000;
