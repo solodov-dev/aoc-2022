@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
-    "log": "node utils/log_answers.js",
-    "generate": "node utils/generate_day.js"
+    "log": "node utils/log.js",
+    "generate": "node utils/generate.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/solodov-dev/aoc-2021#readme",
   "devDependencies": {
-    "eslint": "^8.5.0",
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "jest": "^27.4.5"
   }
 }
